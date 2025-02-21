@@ -10,6 +10,9 @@ class CustomNavbar extends HTMLElement {
         // Navbar HTML structure
         navbar.innerHTML = `
             <div class="logo">MyLogo</div>
+             <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
