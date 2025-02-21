@@ -135,6 +135,12 @@ class CustomNavbar extends HTMLElement {
 
         // Append styles & navbar to Shadow DOM
         this.shadowRoot.append(style, navbar);
+        const hamburger = navbar.querySelector(".hamburger");
+        const navLinks = navbar.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
 
         // Dark Mode Toggle
         const themeToggleBtn = navbar.querySelector(".theme-toggle");
