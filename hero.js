@@ -4,15 +4,31 @@ class heroSection extends HTMLElement{
         this.attachShadow({mode: "open"});
         const hero = document.createElement("section");
         hero.classList.add("hero")
-        const slot = document.createElement("slot");
 
-        // Append slot to hero section
-        hero.appendChild(slot);
+        // Hero Content
+        hero.innerHTML = `
+            <div class="hero-content">
+                <h1>Welcome to Our Platform</h1>
+                <p>Your journey to success starts here. Join us and explore endless possibilities.</p>
+                <div class="buttons">
+                    <button class="primary-btn">Get Started</button>
+                    <button class="secondary-btn">Learn More</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        `;
+
+
 
 const style = document.createElement("style");
-style.textContent = `
-:host {
-                --bg-color:#00000;
+style.textContent = 
+`
+            :host {
+                --bg-image: url('hero-bg.jpg');
                 --text-color: white;
                 --button-primary: #ff5733;
                 --button-secondary: rgba(255, 255, 255, 0.5);
@@ -23,8 +39,6 @@ style.textContent = `
 
             .hero {
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 90vh;
                 background: var(--bg-image) no-repeat center center/cover;
                 text-align: center;
@@ -115,8 +129,8 @@ style.textContent = `
                     font-size: 1rem;
                 }
             }
-        ;
-`
+        `;
+
 this.shadowRoot.append(style, hero);
     }
    
