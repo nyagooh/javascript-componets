@@ -16,14 +16,8 @@ class CustomNavbar extends HTMLElement {
 
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li class="dropdown">
                     <a href="#">About ⌄</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Our Story</a></li>
-                    </ul>
-                </li>
-                <li><input type="text" placeholder="Search..." class="search"></li>
+                
                 <li><button class="theme-toggle">🌗</button></li>
             </ul>
         `;
