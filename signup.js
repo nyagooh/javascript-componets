@@ -8,18 +8,27 @@ class SignupForm extends HTMLElement {
 
         container.innerHTML = `
             <div class="left-section">
-                <h2>Capturing Moments, Creating Memories</h2>
-            </div>
-            <div class="right-section">
-                <h2>Create an account</h2>
-                <form>
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Enter your password">
-                    <button type="submit">Create Account</button>
-                </form>
-            </div>
+                        <h2>Capturing Moments, Creating Memories</h2>
+                    </div>
+                    <div class="right-section">
+                        <h2>Create an account</h2>
+                        <p>Already have an account? <a href="#">Log in</a></p>
+                        <form>
+                            <div class="name-fields">
+                                <input type="text" placeholder="First Name">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Enter your password">
+                            <div class="terms">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                            </div>
+                            <button type="submit">Create Account</button>
+                        </form>
+                        <p>Or register with</p>
+                        <button class="google-btn">Google</button>
+                    </div>
         `;
 
         const style = document.createElement("style");
