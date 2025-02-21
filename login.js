@@ -23,7 +23,15 @@ class LoginForm extends HTMLElement {
 
         const style = document.createElement("style");
         style.textContent = `
-
+            :host {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+                background: url('https://images.unsplash.com/photo-1734531352669-11c2b2ddea3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExNXx8fGVufDB8fHx8fA%3D%3D') no-repeat center') no-repeat center;
+                background-size: cover;
+            }
             .login-container {
                 display: flex;
                 justify-content: center;
