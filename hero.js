@@ -4,26 +4,15 @@ class heroSection extends HTMLElement{
         this.attachShadow({mode: "open"});
         const hero = document.createElement("section");
         hero.classList.add("hero")
-        hero.innerHTML = `
-        <div class="hero-content">
-        <h1>Welcome to Our Platform</h1>
-        <p>Your journey to success starts here. Join us and explore endless possibilities.</p>
-        <div class="buttons">
-            <button class="primary-btn">Get Started</button>
-            <button class="secondary-btn">Learn More</button>
-        </div>
-        <div class="social-icons">
-            <a href="#"><img src="facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
-            <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
-        </div>
-    </div>
-`;
+        const slot = document.createElement("slot");
+
+        // Append slot to hero section
+        hero.appendChild(slot);
 
 const style = document.createElement("style");
 style.textContent = `
 :host {
-                --bg-image: url('hero-bg.jpg');
+                --bg-color:#00000;
                 --text-color: white;
                 --button-primary: #ff5733;
                 --button-secondary: rgba(255, 255, 255, 0.5);
@@ -132,4 +121,4 @@ this.shadowRoot.append(style, hero);
     }
    
 }
-customElements.define("hero-section", HeroSection);
+customElements.define("hero-section", heroSection);
