@@ -68,6 +68,16 @@ class SignupForm extends HTMLElement {
                         background: var(--primary-color);
                         cursor: pointer;
                     }
+                        .terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+.terms input {
+    width: 16px;
+    height: 16px;
+}
                     .google-btn {
                         background: white;
                         color: black;
