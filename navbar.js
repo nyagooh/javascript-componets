@@ -63,6 +63,29 @@ class CustomNavbar extends HTMLElement {
             .nav-button:hover {
                 background: var(--button-hover, darkblue);
             }
+                /* Dropdown */
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--navbar-bg);
+                list-style: none;
+                padding: 5px;
+                border-radius: 5px;
+                width: 120px;
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            /* Hamburger Menu (Mobile) */
+            .hamburger {
+                display: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
         `;
 
         // Append styles & navbar to Shadow DOM
