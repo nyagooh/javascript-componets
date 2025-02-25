@@ -27,7 +27,16 @@ class SignupForm extends HTMLElement {
                             <button type="submit">Create Account</button>
                         </form>
                         <p>Or register with</p>
-                        <button class="google-btn">Google</button>
+                        <button class="google-btn">
+  <text class = "google-text" x="10" y="30" font-family="Poppins, Arial, sans-serif"  font-weight="bold">
+ <span class="blue">G</span>
+        <span class="red">o</span>
+        <span class="yellow">o</span>
+        <span class="blue">g</span>
+        <span class="green">l</span>
+        <span class="red">e</span>
+  </text>
+                        </button>
                     </div>
         `;
 
@@ -70,6 +79,16 @@ class SignupForm extends HTMLElement {
                         background: var(--primary-color);
                         cursor: pointer;
                     }
+                          .google-text {
+            font-family: Poppins, Arial, sans-serif;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .blue { color: #4285F4; }
+        .red { color: #EA4335; }
+        .yellow { color: #FBBC05; }
+        .green { color: #34A853; }
                         .terms {
     display: flex;
     align-items: center;
