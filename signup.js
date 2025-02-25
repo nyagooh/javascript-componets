@@ -1,12 +1,12 @@
 class SignupForm extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
 
-        const container = document.createElement("div");
-        container.classList.add("signup-container");
+    const container = document.createElement("div");
+    container.classList.add("signup-container");
 
-        container.innerHTML = `
+    container.innerHTML = `
             <div class="left-section">
                         <h2>Capturing Moments, Creating Memories</h2>
                     </div>
@@ -31,8 +31,8 @@ class SignupForm extends HTMLElement {
                     </div>
         `;
 
-        const style = document.createElement("style");
-        style.textContent = `
+    const style = document.createElement("style");
+    style.textContent = `
         
          .signup-container {
                         display: flex;
@@ -84,10 +84,47 @@ class SignupForm extends HTMLElement {
                         background: white;
                         color: black;
                     }
+                        @media (max-width: 768px) {
+        .signup-container {
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .left-section {
+            width: 100%;
+            height: 200px;
+        }
+
+        .right-section {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .name-fields {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .signup-container {
+            width: 95%;
+        }
+
+        .right-section {
+            padding: 15px;
+        }
+
+        input, button {
+            padding: 8px;
+        }
+    }
         `;
 
-        this.shadowRoot.append(style, container);
-    }
+    this.shadowRoot.append(style, container);
+  }
 }
 
-customElements.define('signup-form', SignupForm);
+customElements.define("signup-form", SignupForm);
