@@ -13,8 +13,6 @@ class LoginForm extends HTMLElement {
          <div class="right-section">
                         <h2>Welcome Back</h2>
                         <p>Please Enter your Account details</p>
-                        <p>Do not  have an account? <a href="#">Sign up</a></p>
-                        <form>
                             <input type="email" placeholder="Email">
                             <input type="password" placeholder="Enter your password">
                            <div class="terms">
@@ -23,7 +21,7 @@ class LoginForm extends HTMLElement {
                             <button type="submit">Login</button>
                         </form>
                         <p>Or register with</p>
-                        <button class="google-btn">
+                        <button class="social-btn">
                         <text class = "google-text" x="10" y="30" font-family="Poppins, Arial, sans-serif"  font-weight="bold">
                                 <span class="blue">G</span>
                                 <span class="red">o</span>
@@ -101,7 +99,7 @@ class LoginForm extends HTMLElement {
                         width: 16px;
                         height: 16px;
                     }
-                    .google-btn {
+                    .social-btn {
                         background: white;
                         color: black;
                     }
