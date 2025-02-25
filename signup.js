@@ -38,9 +38,10 @@ class SignupForm extends HTMLElement {
                         display: flex;
                         max-width: 900px;
                         width: 100%;
-                        background: #2d2d2d;
+                        background:var(bg-color);
                         border-radius: 10px;
                         overflow: hidden;
+
                     }
                     .left-section {
                         width: 50%;
@@ -54,6 +55,7 @@ class SignupForm extends HTMLElement {
                     .right-section {
                         width: 50%;
                         padding: 40px;
+                        background-color:var(--text-color);
                     }
                     input, button {
                         width: 100%;
@@ -62,7 +64,7 @@ class SignupForm extends HTMLElement {
                         border-radius: 5px;
                         border: 1px solid var(--input-border);
                         background: var(--bd-color);
-                        color: var(--text-color);
+                        color: var(--bg-color);
                     }
                     button {
                         background: var(--primary-color);
